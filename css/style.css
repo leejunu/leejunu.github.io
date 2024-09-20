@@ -128,3 +128,20 @@ span {
   margin-left: auto;
   margin-right: auto;
 }
+
+footer {
+  background-color: lightgray;
+  text-align: center;
+  padding: 8px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 12px;
+}
+
+#subi {
+  color: #A51C30;
+  font-size: 12px;
+  margin-left: -2px
+}
