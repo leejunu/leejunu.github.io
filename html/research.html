@@ -11,35 +11,35 @@
   <h2>Research</h2>
   <br>
 
-  <h5 style='width: 70%'>Comparing three learn-then-test paradigms in a multivariate normal means problem</h5>
+  <h5 style='width: 70%'>Power of masking methods for adaptive testing in a multivariate normal means problem</h5>
     <p>Abhinav Chakraborty, <b>Junu Lee</b>, and Eugene Katsevich<br>
-      <a href='https://arxiv.org/abs/2601.07764' id='link'>[link]</a> 
+      <a href='https://arxiv.org/abs/2601.07764v2' id='link'>[link]</a> 
     </p>
   
     <button class='toggle-button' onclick="showAbstract('abstract5')"><i class="fa-solid fa-caret-down"></i>
       Abstract</button>
   
-    <p class='abstract' id="abstract5">Many modern procedures use the data to learn a structure and then leverage it to test
-    many hypotheses. If the entire data is used at both stages, analytical or computational
-    corrections for selection bias are required to ensure validity (post-learning adjustment).
-    Alternatively, one can learn and/or test on masked versions of the data to avoid selection
-    bias, either via information splitting or null augmentation. Choosing among these three
-    learn-then-test paradigms, and how much masking to employ for the latter two, are critical
-    decisions impacting power that currently lack theoretical guidance. In a multivariate
-    normal means model, we derive asymptotic power formulas for prototypical methods
-    from each paradigm—variants of sample splitting, conformal-style null augmentation,
-    and resampling-based post-learning adjustment—quantifying the power losses incurred
-    by masking at each stage. For these paradigm representatives, we find that post-learning
-    adjustment is most powerful, followed by null augmentation, and then information splitting.
-    Moreover, null augmentation can be nearly as powerful as post-learning adjustment, while
-    avoiding its challenges: the power of the former approaches that of the latter if the number
-    of nulls used for augmentation is a vanishing fraction of the number of hypotheses. We
-    also prove for a tractable proxy that the optimal number of nulls scales as the square
-    root of the number of hypotheses, challenging existing heuristics. Finally, we characterize
-    optimal tuning for information splitting by identifying an optimal split fraction and tying
-    it to the difficulty of the learning problem. These results establish a theoretical foundation
-    for key decisions in the deployment of learn-then-test methods.</p>
-  
+    <p class='abstract' id="abstract5">Many large-scale testing procedures learn signal structure from the data to boost power.
+    Direct data reuse can inflate Type-I error (“double dipping”), so a common remedy is
+    masking: withholding some information during learning and using it for testing. Sample
+    splitting masks by withholding observations for testing, while null augmentation (e.g.,
+    knockoffs or full-conformal outlier detection) masks by appending null samples or variables
+    and withholding their identities until testing. In many settings, little is known about
+    how the power of masking methods compares across mechanisms, across tuning choices,
+    or against more data-efficient non-masking alternatives. We study these questions in a
+    stylized two-groups multivariate normal means model with an unknown signal direction
+    learned from the data. Within this testbed, we develop a transparent, unified set of
+    asymptotic power expressions for three parallel methods differing in masking choices:
+    a sample splitting method, a full-conformal-style null augmentation method, and an
+    oracle in-sample benchmark. Our main findings are: (1) the augmentation method is more
+    powerful than the splitting method with matched tuning; (2) the power-optimal number
+    of null samples for the augmentation method is a vanishing fraction of the number of
+    tests, in which case its power approaches that of the in-sample benchmark; and (3) for a
+    tractable approximation to the augmentation method, the optimal number of null samples
+    scales as the square root of the number of tests, with empirical evidence suggesting a
+    similar scaling for the method itself. These results characterize masking-induced power
+    trade-offs in a tractable model and suggest qualitative lessons for other settings.</p>
+      
     <br>
 
   <h5 style='width: 70%'>Full-conformal novelty detection: A powerful and non-random approach</h5>
