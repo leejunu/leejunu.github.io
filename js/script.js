@@ -5,11 +5,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
   links.forEach(link => {
     link.addEventListener('click', function(event) {
-      console.log(link)
       if (!link.href.endsWith('cv.pdf')) {
         event.preventDefault();
+        const url = new URL(link.href);
+        url.searchParams.set('_ts', Date.now().toString());
 
-        fetch(link.href)
+        fetch(url.toString(), { cache: 'no-store' })
           .then(response => response.text())
           .then(html => {
             mainContent.innerHTML = html;
