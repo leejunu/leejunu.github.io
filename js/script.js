@@ -21,13 +21,18 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// Abstract button handling 
-function showAbstract(abstractId) {
-  var paragraph = document.getElementById(abstractId);
+// Abstract button handling
+function showAbstract(abstractId, button) {
+  const paragraph = document.getElementById(abstractId);
 
-  if (paragraph.style.display === "none") {
-    paragraph.style.display = "block";
-  } else {
-    paragraph.style.display = "none";
+  if (!paragraph) {
+    return;
+  }
+
+  const isOpen = paragraph.classList.toggle('is-open');
+
+  if (button) {
+    button.classList.toggle('is-open', isOpen);
+    button.setAttribute('aria-expanded', String(isOpen));
   }
 }

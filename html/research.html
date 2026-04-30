@@ -9,143 +9,163 @@
 
 <body>
   <h2>Research</h2>
-  <p style="font-size: 0.9rem; margin-top: 0.25rem; margin-bottom: 1.5rem;">
+  <p class="research-note">
     (* denotes alphabetical ordering or equal contribution)
   </p>
 
-  <h5 style='width: 70%'>Power of masking methods for adaptive testing in a multivariate normal means problem</h5>
-    <p>Abhinav Chakraborty*, <b>Junu Lee</b>*, and Eugene Katsevich<br>
-      <a href='https://arxiv.org/abs/2601.07764' id='link'>[link]</a> 
-      <a href='https://github.com/Katsevich-Lab/masking-power' id='link'>[code]</a>
-    </p>
-  
-    <button class='toggle-button' onclick="showAbstract('abstract5')"><i class="fa-solid fa-caret-down"></i>
-      Abstract</button>
-  
-    <p class='abstract' id="abstract5">Many large-scale testing procedures learn signal structure from the data to boost power.
-    Direct data reuse can inflate Type-I error (“double dipping”), so a common remedy is
-    masking: withholding some information during learning and using it for testing. Sample
-    splitting masks by withholding observations for testing, while null augmentation (e.g.,
-    knockoffs or full-conformal outlier detection) masks by appending null samples or variables
-    and withholding their identities until testing. In many settings, little is known about
-    how the power of masking methods compares across mechanisms, across tuning choices,
-    or against more data-efficient non-masking alternatives. We study these questions in a
-    stylized two-groups multivariate normal means model with an unknown signal direction
-    learned from the data. Within this testbed, we develop a transparent, unified set of
-    asymptotic power expressions for three parallel methods differing in masking choices:
-    a sample splitting method, a full-conformal-style null augmentation method, and an
-    oracle in-sample benchmark. Our main findings are: (1) the augmentation method is more
-    powerful than the splitting method with matched tuning; (2) the power-optimal number
-    of null samples for the augmentation method is a vanishing fraction of the number of
-    tests, in which case its power approaches that of the in-sample benchmark; and (3) for a
-    tractable approximation to the augmentation method, the optimal number of null samples
-    scales as the square root of the number of tests, with empirical evidence suggesting a
-    similar scaling for the method itself. These results characterize masking-induced power
-    trade-offs in a tractable model and suggest qualitative lessons for other settings.</p>
-      
-    <br>
+  <div class="research-list">
+    <section class="research-module">
+      <div class="research-module-header">
+        <h5>Power of masking methods for adaptive testing in a multivariate normal means problem</h5>
+      </div>
+      <p class="research-meta">Abhinav Chakraborty*, <b>Junu Lee</b>*, and Eugene Katsevich</p>
+      <div class="research-actions">
+        <div class="research-links">
+          <a href='https://arxiv.org/abs/2601.07764' id='link' target="_blank" rel="noopener noreferrer">[link]</a>
+          <a href='https://github.com/Katsevich-Lab/masking-power' id='link' target="_blank" rel="noopener noreferrer">[code]</a>
+        </div>
+        <button class='toggle-button research-toggle' onclick="showAbstract('abstract5', this)" aria-expanded="false">
+          <i class="fa-solid fa-caret-right"></i> Abstract
+        </button>
+      </div>
+      <p class='abstract research-abstract' id="abstract5">Many large-scale testing procedures learn signal structure from the data to boost power.
+        Direct data reuse can inflate Type-I error (“double dipping”), so a common remedy is
+        masking: withholding some information during learning and using it for testing. Sample
+        splitting masks by withholding observations for testing, while null augmentation (e.g.,
+        knockoffs or full-conformal outlier detection) masks by appending null samples or variables
+        and withholding their identities until testing. In many settings, little is known about
+        how the power of masking methods compares across mechanisms, across tuning choices,
+        or against more data-efficient non-masking alternatives. We study these questions in a
+        stylized two-groups multivariate normal means model with an unknown signal direction
+        learned from the data. Within this testbed, we develop a transparent, unified set of
+        asymptotic power expressions for three parallel methods differing in masking choices:
+        a sample splitting method, a full-conformal-style null augmentation method, and an
+        oracle in-sample benchmark. Our main findings are: (1) the augmentation method is more
+        powerful than the splitting method with matched tuning; (2) the power-optimal number
+        of null samples for the augmentation method is a vanishing fraction of the number of
+        tests, in which case its power approaches that of the in-sample benchmark; and (3) for a
+        tractable approximation to the augmentation method, the optimal number of null samples
+        scales as the square root of the number of tests, with empirical evidence suggesting a
+        similar scaling for the method itself. These results characterize masking-induced power
+        trade-offs in a tractable model and suggest qualitative lessons for other settings.</p>
+    </section>
 
-  <h5 style='width: 70%'>Full-conformal novelty detection</h5>
-    <p><b>Junu Lee</b>, Ilia Popov, and Zhimei Ren<br>
-      Under Major Revision at <i> Journal of the American Statistical Association (JASA)</i> <br>
-      <a href='https://arxiv.org/abs/2501.02703' id='link'>[link]</a> 
-    </p>
-  
-    <button class='toggle-button' onclick="showAbstract('abstract4')"><i class="fa-solid fa-caret-down"></i>
-      Abstract</button>
-  
-    <p class='abstract' id="abstract4">We introduce a powerful and non-random methodology 
-      for novelty detection, offering distribution-free false discovery rate (FDR) control 
-      guarantees. Building on the full-conformal inference framework and the concept of e-values, 
-      we introduce full-conformal e-values to quantify evidence for novelty relative to a given 
-      reference dataset. These e-values are then utilized by carefully crafted multiple testing 
-      procedures to identify a set of novel units out-of-sample with provable finite-sample FDR 
-      control. Furthermore, our method is extended to address distribution shift, accommodating 
-      scenarios where novelty detection must be performed on data drawn from a shifted 
-      distribution relative to the reference dataset. In all settings, our method is non-random 
-      and can perform powerfully with limited amounts of reference data. Empirical evaluations 
-      on synthetic and real-world datasets demonstrate that our approach significantly 
-      outperforms existing methods for novelty detection.</p>
-  
-    <br>
+    <section class="research-module">
+      <div class="research-module-header">
+        <h5>Full-conformal novelty detection</h5>
+      </div>
+      <p class="research-meta"><b>Junu Lee</b>, Ilia Popov, and Zhimei Ren<br>
+        Under Major Revision at <i>Journal of the American Statistical Association (JASA)</i></p>
+      <div class="research-actions">
+        <div class="research-links">
+          <a href='https://arxiv.org/abs/2501.02703' id='link' target="_blank" rel="noopener noreferrer">[link]</a>
+          <a href='https://github.com/leejunu/fcnd' id='link' target="_blank" rel="noopener noreferrer">[code]</a>
+        </div>
+        <button class='toggle-button research-toggle' onclick="showAbstract('abstract4', this)" aria-expanded="false">
+          <i class="fa-solid fa-caret-right"></i> Abstract
+        </button>
+      </div>
+      <p class='abstract research-abstract' id="abstract4">We introduce a powerful and non-random methodology
+        for novelty detection, offering distribution-free false discovery rate (FDR) control
+        guarantees. Building on the full-conformal inference framework and the concept of e-values,
+        we introduce full-conformal e-values to quantify evidence for novelty relative to a given
+        reference dataset. These e-values are then utilized by carefully crafted multiple testing
+        procedures to identify a set of novel units out-of-sample with provable finite-sample FDR
+        control. Furthermore, our method is extended to address distribution shift, accommodating
+        scenarios where novelty detection must be performed on data drawn from a shifted
+        distribution relative to the reference dataset. In all settings, our method is non-random
+        and can perform powerfully with limited amounts of reference data. Empirical evaluations
+        on synthetic and real-world datasets demonstrate that our approach significantly
+        outperforms existing methods for novelty detection.</p>
+    </section>
 
-  <h5 style='width: 70%'>A general condition for bias attenuation by a
-  nondifferentially mismeasured confounder</h5>
-  <p>Jeffrey Zhang and <b>Junu Lee</b> <br>
-    <i>Biometrika</i>, 2025 <br>
-    <a href='https://arxiv.org/abs/2409.12928' id='link'>[link]</a>
-  </p>
+    <section class="research-module">
+      <div class="research-module-header">
+        <h5>A general condition for bias attenuation by a nondifferentially mismeasured confounder</h5>
+      </div>
+      <p class="research-meta">Jeffrey Zhang and <b>Junu Lee</b><br>
+        <i>Biometrika</i>, 2025</p>
+      <div class="research-actions">
+        <div class="research-links">
+          <a href='https://arxiv.org/abs/2409.12928' id='link' target="_blank" rel="noopener noreferrer">[link]</a>
+        </div>
+        <button class='toggle-button research-toggle' onclick="showAbstract('abstract3', this)" aria-expanded="false">
+          <i class="fa-solid fa-caret-right"></i> Abstract
+        </button>
+      </div>
+      <p class='abstract research-abstract' id="abstract3">In real-world studies, the collected confounders may suffer from measurement error.
+        Although mismeasurement of confounders is typically unintentional—originating from
+        sources such as human oversight or imprecise machinery—deliberate mismeasurement
+        also occurs and is becoming increasingly more common. For example, in the 2020
+        U.S. Census, noise was added to measurements to assuage privacy concerns. Sensitive
+        variables such as income or age are oftentimes partially censored and are only known
+        up to a range of values. In such settings, obtaining valid estimates of the causal effect of
+        a binary treatment can be impossible, as mismeasurement of confounders constitutes a
+        violation of the no unmeasured confounding assumption. A natural question is whether
+        the common practice of simply adjusting for the mismeasured confounder is justifiable.
+        In this article, we answer this question in the affirmative and demonstrate that in many
+        realistic scenarios not covered by previous literature, adjusting for the mismeasured
+        confounders reduces bias compared to not adjusting.</p>
+    </section>
 
-  <button class='toggle-button' onclick="showAbstract('abstract3')"><i class="fa-solid fa-caret-down"></i>
-    Abstract</button>
+    <section class="research-module">
+      <div class="research-module-header">
+        <h5>Boosting e-BH via conditional calibration</h5>
+      </div>
+      <p class="research-meta"><b>Junu Lee</b> and Zhimei Ren<br>
+        Under Major Revision at <i>Journal of the Royal Statistical Society: Series B (JRSSB)</i></p>
+      <div class="research-actions">
+        <div class="research-links">
+          <a href='https://arxiv.org/abs/2404.17562' id='link' target="_blank" rel="noopener noreferrer">[link]</a>
+          <a href='https://github.com/leejunu/e-bh-cc' id='link' target="_blank" rel="noopener noreferrer">[code]</a>
+        </div>
+        <button class='toggle-button research-toggle' onclick="showAbstract('abstract1', this)" aria-expanded="false">
+          <i class="fa-solid fa-caret-right"></i> Abstract
+        </button>
+      </div>
+      <p class='abstract research-abstract' id="abstract1">The e-BH procedure is an e-value-based multiple testing procedure that provably
+        controls the false discovery rate (FDR) under any dependence structure between the e-values. Despite this appealing
+        theoretical FDR control guarantee, the e-BH procedure often suffers from low power in practice. In this paper, we
+        propose a general framework that boosts the power of e-BH without sacrificing its FDR control under arbitrary
+        dependence. This is achieved by the technique of conditional calibration, where we take as input the e-values and
+        calibrate them to be a set of "boosted e-values" that are guaranteed to be no less -- and are often more -- powerful
+        than the original ones. Our general framework is explicitly instantiated in three classes of multiple testing
+        problems: (1) testing under parametric models, (2) conditional independence testing under the model-X setting, and
+        (3) model-free conformalized selection. Extensive numerical experiments show that our proposed method significantly
+        improves the power of e-BH while continuing to control the FDR. We also demonstrate the effectiveness of our method
+        through an application to an observational study dataset for identifying individuals whose counterfactuals satisfy
+        certain properties.</p>
+    </section>
 
-  <p class='abstract' id="abstract3">In real-world studies, the collected confounders may suffer from measurement error.
-  Although mismeasurement of confounders is typically unintentional—originating from
-  sources such as human oversight or imprecise machinery—deliberate mismeasurement
-  also occurs and is becoming increasingly more common. For example, in the 2020
-  U.S. Census, noise was added to measurements to assuage privacy concerns. Sensitive
-  variables such as income or age are oftentimes partially censored and are only known
-  up to a range of values. In such settings, obtaining valid estimates of the causal effect of
-  a binary treatment can be impossible, as mismeasurement of confounders constitutes a
-  violation of the no unmeasured confounding assumption. A natural question is whether
-  the common practice of simply adjusting for the mismeasured confounder is justifiable.
-  In this article, we answer this question in the affirmative and demonstrate that in many
-  realistic scenarios not covered by previous literature, adjusting for the mismeasured
-  confounders reduces bias compared to not adjusting.</p>
-
-  <br>
-
-  <h5>Boosting e-BH via conditional calibration</h5>
-  <p><b>Junu Lee</b> and Zhimei Ren <br>
-    Under Major Revision at <i> Journal of the Royal Statistical Society: Series B (JRSSB)</i> <br>
-    <a href='https://arxiv.org/abs/2404.17562' id='link'>[link]</a>
-    <a href='https://github.com/leejunu/e-bh-cc' id='link'>[code]</a>
-  </p>
-
-  <button class='toggle-button' onclick="showAbstract('abstract1')"><i class="fa-solid fa-caret-down"></i>
-    Abstract</button>
-
-  <p class='abstract' id="abstract1">The e-BH procedure is an e-value-based multiple testing procedure that provably
-    controls the false discovery rate (FDR) under any dependence structure between the e-values. Despite this appealing
-    theoretical FDR control guarantee, the e-BH procedure often suffers from low power in practice. In this paper, we
-    propose a general framework that boosts the power of e-BH without sacrificing its FDR control under arbitrary
-    dependence. This is achieved by the technique of conditional calibration, where we take as input the e-values and
-    calibrate them to be a set of "boosted e-values" that are guaranteed to be no less -- and are often more -- powerful
-    than the original ones. Our general framework is explicitly instantiated in three classes of multiple testing
-    problems: (1) testing under parametric models, (2) conditional independence testing under the model-X setting, and
-    (3) model-free conformalized selection. Extensive numerical experiments show that our proposed method significantly
-    improves the power of e-BH while continuing to control the FDR. We also demonstrate the effectiveness of our method
-    through an application to an observational study dataset for identifying individuals whose counterfactuals satisfy
-    certain properties.</p>
-
-  <br>
-
-  <h5 style='width: 70%'>Navigating Data Heterogeneity in Federated Learning: A Semi-Supervised Federated Object Detection
-  </h5>
-  <p>Taehyeon Kim, Eric Lin, <b>Junu Lee</b>, Christian Lau, and Vaikkunth Mugunthan <br>
-    <i>Neural Information Processing Systems (NeurIPS)</i>, 2023 <br>
-    <a href='https://proceedings.neurips.cc/paper_files/paper/2023/hash/066e4dbfeccb5dc2851acd5eca584937-Abstract-Conference.html' id='link'>[link]</a>
-  </p>
-
-  <button class='toggle-button' onclick="showAbstract('abstract2')"><i class="fa-solid fa-caret-down"></i>
-    Abstract</button>
-
-  <p class='abstract' id="abstract2">Federated Learning (FL) has emerged as a potent framework for training models
-    across distributed data sources while maintaining data privacy. Nevertheless, it faces challenges with limited
-    high-quality labels and non-IID client data, particularly in applications like autonomous driving. To address these
-    hurdles, we navigate the uncharted waters of Semi-Supervised Federated Object Detection (SSFOD). We present a
-    pioneering SSFOD framework, designed for scenarios where labeled data reside only at the server while clients
-    possess unlabeled data. Notably, our method represents the inaugural implementation of SSFOD for clients with 0%
-    labeled non-IID data, a stark contrast to previous studies that maintain some subset of labels at each client. We
-    propose FedSTO, a two-stage strategy encompassing Selective Training followed by Orthogonally enhanced
-    full-parameter training, to effectively address data shift (e.g. weather conditions) between server and clients. Our
-    contributions include selectively refining the backbone of the detector to avert overfitting, orthogonality
-    regularization to boost representation divergence, and local EMA-driven pseudo label assignment to yield
-    high-quality pseudo labels. Extensive validation on prominent autonomous driving datasets (BDD100K, Cityscapes, and
-    SODA10M) attests to the efficacy of our approach, demonstrating state-of-the-art results. Remarkably, FedSTO, using
-    just 20-30% of labels, performs nearly as well as fully-supervised centralized training methods.</p>
-
-
-  <br>
+    <section class="research-module">
+      <div class="research-module-header">
+        <h5>Navigating Data Heterogeneity in Federated Learning: A Semi-Supervised Federated Object Detection</h5>
+      </div>
+      <p class="research-meta">Taehyeon Kim, Eric Lin, <b>Junu Lee</b>, Christian Lau, and Vaikkunth Mugunthan<br>
+        <i>Neural Information Processing Systems (NeurIPS)</i>, 2023</p>
+      <div class="research-actions">
+        <div class="research-links">
+          <a href='https://proceedings.neurips.cc/paper_files/paper/2023/hash/066e4dbfeccb5dc2851acd5eca584937-Abstract-Conference.html' id='link' target="_blank" rel="noopener noreferrer">[link]</a>
+        </div>
+        <button class='toggle-button research-toggle' onclick="showAbstract('abstract2', this)" aria-expanded="false">
+          <i class="fa-solid fa-caret-right"></i> Abstract
+        </button>
+      </div>
+      <p class='abstract research-abstract' id="abstract2">Federated Learning (FL) has emerged as a potent framework for training models
+        across distributed data sources while maintaining data privacy. Nevertheless, it faces challenges with limited
+        high-quality labels and non-IID client data, particularly in applications like autonomous driving. To address these
+        hurdles, we navigate the uncharted waters of Semi-Supervised Federated Object Detection (SSFOD). We present a
+        pioneering SSFOD framework, designed for scenarios where labeled data reside only at the server while clients
+        possess unlabeled data. Notably, our method represents the inaugural implementation of SSFOD for clients with 0%
+        labeled non-IID data, a stark contrast to previous studies that maintain some subset of labels at each client. We
+        propose FedSTO, a two-stage strategy encompassing Selective Training followed by Orthogonally enhanced
+        full-parameter training, to effectively address data shift (e.g. weather conditions) between server and clients. Our
+        contributions include selectively refining the backbone of the detector to avert overfitting, orthogonality
+        regularization to boost representation divergence, and local EMA-driven pseudo label assignment to yield
+        high-quality pseudo labels. Extensive validation on prominent autonomous driving datasets (BDD100K, Cityscapes, and
+        SODA10M) attests to the efficacy of our approach, demonstrating state-of-the-art results. Remarkably, FedSTO, using
+        just 20-30% of labels, performs nearly as well as fully-supervised centralized training methods.</p>
+    </section>
+  </div>
 </body>
 </html>
