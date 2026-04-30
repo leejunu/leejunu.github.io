@@ -4,6 +4,10 @@ html {
   overflow-y: scroll;
 }
 
+body {
+  min-height: 100%;
+}
+
 .ibm-plex-sans-regular {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;
@@ -57,6 +61,10 @@ html {
   display: block;
 }
 
+.section-view .sidenav {
+  display: none;
+}
+
 #link {
   color: #A51C30;
   font-size: 16px;
@@ -101,6 +109,10 @@ html {
   font-size: 16px;
 }
 
+.profile-links {
+  padding-left: 10%;
+}
+
 .text-center {
   text-align: center;
   padding-top: 20px;
@@ -118,7 +130,26 @@ span {
 .main {
   margin-top: 60px;
   padding: 20px;
+  padding-bottom: 64px;
+}
+
+.home-view .main {
   margin-left: 20%;
+}
+
+.section-view .main {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-content {
+  padding-right: 20%;
+  font-size: 18px;
+}
+
+.home-content #link {
+  font-size: inherit;
 }
 
 .software-intro {
@@ -218,6 +249,11 @@ span {
   line-height: 1.6;
 }
 
+.teaching-table-wrap {
+  max-width: 70%;
+  overflow-x: auto;
+}
+
 .image .profile-pic {
   width: 55%;
   height: 55%;
@@ -246,11 +282,80 @@ footer {
 }
 
 @media (max-width: 991px) {
+  .navbar-brand {
+    flex: initial;
+  }
+
+  .navbar-nav>li {
+    padding-left: 0;
+  }
+
+  .nav-link:hover::after {
+    display: none;
+  }
+
+  .sidenav,
+  .home-view .sidenav {
+    position: static;
+    width: 100%;
+    height: auto;
+    overflow-x: visible;
+    padding: 1.5rem 1rem 0;
+    margin-top: 60px;
+    font-size: 1rem;
+  }
+
+  .section-view .sidenav {
+    display: none;
+  }
+
+  .profile-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.85rem 1.15rem;
+    flex-wrap: wrap;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .image .profile-pic {
+    width: min(55%, 240px);
+    height: auto;
+  }
+
+  .main,
+  .home-view .main,
+  .section-view .main {
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .home-view .main {
+    margin-top: 0;
+  }
+
+  .section-view .main {
+    margin-top: 60px;
+  }
+
+  .home-content {
+    padding-right: 0;
+    font-size: 16px;
+  }
+
   .software-intro,
   .software-list,
   .research-note,
-  .research-list {
+  .research-list,
+  .teaching-table-wrap {
     max-width: 100%;
+  }
+
+  .teaching-table-wrap table {
+    min-width: 560px;
   }
 
   .software-module-header,
@@ -261,5 +366,9 @@ footer {
   .research-actions {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  footer {
+    position: static;
   }
 }
