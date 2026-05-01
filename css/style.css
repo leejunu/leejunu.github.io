@@ -209,6 +209,14 @@ span {
   margin-bottom: 0;
 }
 
+.software-actions {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
 .research-note {
   max-width: 70%;
   font-size: 0.9rem;
